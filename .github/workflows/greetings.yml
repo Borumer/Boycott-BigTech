@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Thanks for contributing to the Boycott Big Tech website! Your contribution helps us strengthen the fight against Big Tech, so make sure to read the Contributing Guide so your post is up to the standards for this project.'
+        pr-message: 'Thanks for contributing to the Boycott Big Tech website! Your contribution helps us strengthen the fight against Big Tech, so make sure to read the Contributing Guide so your post is up to the standards for this project.'
